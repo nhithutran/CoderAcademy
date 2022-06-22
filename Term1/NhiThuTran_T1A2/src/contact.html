@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+  <link rel="icon" type="image/x-icon" href="./images/NT.ico">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!-- Navigation bar-->
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo" tabindex="0">
+        <a href="https://nhi-tran.netlify.app" rel="home">NT</a>
+      </div>
+      <!-- Navigation menu -->
+      <ul class="nav-links">
+        <!-- Checkbox icon  -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger" tabindex="1">&#9776;</label>
+        <!-- Navigation menus -->
+        <div class="menu">
+          <li><a href="index.html" tabindex="0">Home</a></li>
+          <li><a href="about.html" tabindex="0">About</a></li>
+          <li><a href="resume.html" tabindex="0">Resume</a></li>
+          <li><a href="blog.html" tabindex="0">Blog</a></li>
+          <li><a href="contact.html" tabindex="0">Contact</a></li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <div class="container contact-details contact-form">
+      <h1>Contact me</h1>
+      <h3 class="contact-email">nhihuttran@gmail.com</h3>
+      <!-- Professional contact links -->
+      <div class="contact-details">
+        <!-- Check if the icons link to LinkedIn or github icon -->
+        <a href="https://www.linkedin.com/in/nhi-tran-39955b233" tabindex="1" target="_blank" class="contact-linkedin">
+          <img src="./images/contact/contact-linkedin.png" alt="contact page linkedin icon">
+        </a>
+        <a href="https://github.com/nhithutran" tabindex="2" target="_blank" class="contact-github">
+          <img src="./images/contact/contact_github_64px.png" alt="contact github icon">
+        </a>
+      </div>
+    </div>
+
+    <!-- Get in touch form -->
+    <div class="form-heading">Get in touch</div>
+    <div class="contact-form">
+      <form action="https://formspree.io/f/xjvlrzwp" method="POST">
+        <div class="contact-details">
+          <label>First Name: </label>
+          <input type="text" name="firstname">
+        </div>
+        <div class="contact-details">
+          <label>Last Name: </label>
+          <input type="text" name="lastname">
+        </div>
+        <div class="contact-details">
+          <label>Email: </label>
+          <input type="email" name="email">
+        </div>
+        <div class="contact-details">
+          <label>Message: </label>
+          <textarea name="message"></textarea>
+        </div>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer">
+      <div class="copyright">
+        <p>© 2022 Nhi Thu Tran</p>
+      </div>
+      <a href="https://www.linkedin.com/in/nhi-tran-39955b233" tabindex="1" target="_blank" class="contact-linkedin">
+        <img src="./images/footer_linkedin_48px.png" alt="contact page linkedin icon">
+      </a>
+      <a href="https://github.com/nhithutran" tabindex="2" target="_blank" class="contact-github">
+        <img src="./images/footer_github_48px.png" alt="contact github icon">
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>

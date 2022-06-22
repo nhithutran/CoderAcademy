@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home page</title>
+  <link rel="icon" type="image/x-icon" href="./images/NT.ico">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <!-- Navigation bar-->
+    <nav class="navbar">
+      <!-- Logo -->
+      <div class="logo" tabindex="0">
+        <a href="https://nhi-tran.netlify.app" rel="home">NT</a>
+      </div>
+      <!-- Navigation menu -->
+      <ul class="nav-links">
+        <!-- Checkbox icon  -->
+        <input type="checkbox" id="checkbox_toggle" />
+        <label for="checkbox_toggle" class="hamburger" tabindex="0">&#9776;</label>
+        <!-- Navigation menus -->
+        <div class="menu">
+          <li><a href="index.html" tabindex="0">Home</a></li>
+          <li><a href="about.html" tabindex="0">About</a></li>
+          <li><a href="resume.html" tabindex="0">Resume</a></li>
+          <li><a href="blog.html" tabindex="0">Blog</a></li>
+          <li><a href="contact.html" tabindex="0">Contact</a></li>
+        </div>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Blog page content -->
+  <div class="main">
+    <h1>Blog</h1>
+    <ul class="cards">
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="./images/blog/csscode-image.jpg" alt="css code image"></div>
+          <div class="card_content">
+            <h2 class="card_title">Beginner CSS tips</h2>
+            <p class="card_text">Lorem ipsum dolor sit amet consectetur vel eum iure. Reprehenderit qui in ea adipiscing elit.
+              eiusmod tempor incididunt ut labore. l eum iure reprehenderit quicons ectetur vel eum iure.</p>
+            <p class="card_text">Published: 01/02/2022</p>
+            <!-- Click read more button to direct to blog post -->
+            <button class="btn card_btn" tabindex="0" onclick="window.location.href= './blog_post1.html';">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="./images/blog/agilewall.jpg" alt="agile wall image"></div>
+          <div class="card_content">
+            <h2 class="card_title">What does Agile methodology mean to a QA?</h2>
+            <p class="card_text">Lorem ipsum dolor sit amet consectetur vel eum iure. Reprehenderit qui in ea adipiscing elit.
+              eiusmod tempor incididunt ut labore.</p>
+            <p class="card_text">Published: 01/01/2022</p>
+            <button class="btn card_btn" tabindex="0" onclick="window.location.href= './blog_post2.html';">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="./images/blog/lovetolearn.jpg" alt="love to learn image"></div>
+          <div class="card_content">
+            <h2 class="card_title">Learning to love learning.</h2>
+            <p class="card_text">Lorem ipsum dolor sit amet, consectetur ratione voluptatem sequi.
+              nesciunt consectetur Lorem ipsum dolor sit amet consectetur ratione voluptatem sequi.</p>
+            <p class="card_text">Published: 01/12/2021</p>
+            <button class="btn card_btn" tabindex="0" onclick="window.location.href= './blog_post3.html';">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="./images/blog/thought-catalog.jpg" alt="journal image"></div>
+          <div class="card_content">
+            <h2 class="card_title">How journalling can help you achieve your goals.</h2>
+            <p class="card_text">Lorem ipsum dolor sit adipiscing elit consectetur adipiscing. Know consectetur adipiscing elit consectetur adipiscing.
+            </p>
+            <p class="card_text">Published: 01/11/2021</p>
+            <button class="btn card_btn" tabindex="0" onclick="window.location.href= './blog_post4.html';">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image"><img src="./images/blog/campfood.jpg" alt="campfood image"></div>
+          <div class="card_content">
+            <h2 class="card_title">Gourmet camp food?</h2>
+            <p class="card_text">Lorem ipsum dolor sit ametad ipiscing it is those adipiscing elit consectetur who do not know consectetur adipiscing elit consectetur adipiscing.</p>
+            <p class="card_text">Published: 01/10/2021</p>
+            <button class="btn card_btn" tabindex="0" onclick="window.location.href= './blog_post5.html';">Read More</button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <div class="copyright">
+        <p>© 2022 Nhi Thu Tran</p>
+      </div>
+      <a href="https://www.linkedin.com/in/nhi-tran-39955b233" tabindex="1" target="_blank" class="contact-linkedin">
+        <img src="./images/footer_linkedin_48px.png" alt="contact page linkedin icon">
+      </a>
+      <a href="https://github.com/nhithutran" tabindex="2" target="_blank" class="contact-github">
+        <img src="./images/footer_github_48px.png" alt="contact github icon">
+      </a>  
+    </div>
+  </footer>
+</body>
+
+</html>
