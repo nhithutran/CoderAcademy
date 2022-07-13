@@ -8,23 +8,6 @@
 
 --------------------------------------------------------------------------------------------------
 
-## Instructions for local use:
-Clone repository:
-```
-git clone https://github.com/nhithutran/Reborn-Plants.git
-```
-Install Gems:
-```
-bundle install
-```
-Create and Initialize Database:
-```
-rails db:create
-rails db:migrate
-rails db:seed
-```
---------------------------------------------------------------------------------------------------
-
 ### **Problem I'm trying to solve by building this particular marketplace app and why?**
 
 The pandemic drove many indoor and investing time and money on plants.  Plant lovers continue to collect plants and become horticultural enthusiast.  Others may no longer have time to look after their plant babies or have space for them when moving homes. Reborn plants provide a specialist plant sites to connect plant lovers in Australia and give pre-loved plants a new home. Reborn plants are a one stop shop for new or pre-loved plants and plant related items.  
