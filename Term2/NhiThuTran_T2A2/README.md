@@ -130,9 +130,9 @@ Seller:
 ## Application discussion
 
 ### **Explain the different high-level components (abstractions) in your app**
-Reborn Plants Marketplace application was developing using architectural framework based around the Model-View-Controller configuration splitting the code into three distinct and interconnecting components.  Puma web server routes http requests using information from the routes.rb file in the config folder.  These routes decide which specific Controllers is executed and used to draw data from which Models.  The Controller will also decide which data should be fetched for the required process and pass the relevant information back to the browser via the Views.
+Reborn Plants Marketplace application was developing using architectural framework based around the Model-View-Controller configuration splitting the code into three interconnecting components to seperate each area of concern.  Puma web server routes http requests using information from the routes.rb file in the config folder.  These routes decide which specific Controllers is executed and used to draw data from which Model.  The Controller will also decide which data should be fetched for the required process and pass the relevant information back to the browser via the Views.
 
-To facilitate interaction between buyers with sellers, the applications primarily use CRUD functionality (Create, Read, Update and Delete). Primary actions to trade new, pre-loved plants, plant related books or accessories are managed via the respective controllers. The Listings controller provide users specific details relating to each listing stored across multiple tables.  
+To facilitate interaction between buyers with sellers, the applications primarily use CRUD functionality (Create, Read, Update and Delete). Primary actions to trade new, pre-loved plants, plant related books or accessories are managed via the respective controllers. The Listings controller provide users specific details relating to each listing stored across multiple tables.  The Listings, Orders and Page controller also inherites useful methods and Devise specific code from the Application Controller.
 
 Through database associations with the user and order tables, user interaction with the application is managed.  Users with authorisation can view their current listing(s) and previously bought or sold items.  This also ensures the correct user has access to buy, edit or delete listings.
 
@@ -156,10 +156,11 @@ Listings attributes:
 
 Order details:
 * Order (zero-to-one) - An order is not created if the listing items is not sold or bought, an order can only be associated to one listing.
-* Order ownership (belongs to) Each order can only have one seller or buyer
+* Order ownership (belongs to) Each order can only have one seller or buyer.
 
 Users:
-* Seller (zero-to-many) A user can choose to only buy and not sell any items, but can be associated to many listings.  This information is recorded when a new listing is added.
+* Users (has many through) Users can have many listings through the order table.
+* Seller (zero-to-many) A user does not need to sell any items, but is required to add a listing in order to become a seller.  A seller can also be associated to many listings.  This information is recorded when a new listing is added.
 * Buyer (zero-to-many) Similar to the seller, a user can sign up but not buy anything. They can however buy more than one item and be associated to many listings.
 * Bought items (has_many) Each user can purchase many items.
 * Sold items (has_many) Each user can sell many items.
@@ -175,5 +176,13 @@ User information is stored in the Users table.  This table contains user email, 
 ![Reborn Plants Schema Image](./docs/Reborn_plants_schema.png)
 
 ### **Describe the way tasks are allocated and tracked in your project**
+Trello was used to plan and manage tasks required to develop my Marketplace Application. Cards were created for each action or task recording implementation information and due dates.  These cards where then allocated into three columns.  DEV-MVP column was for development task needed to meet assignment requirements.  DEV - MVP2 was used to plan requirement optional features if I had addition time and only if all tasks allocated to DEV-MVP column where completed.  Any task related to assignment documentation was allocated into the Documentation column.  Card due dates, Doing and Done columns where then used to track my progress.  Below are screenshots I took of my Trello board at certain stages of the development phase.
+
+[Trello board link](https://trello.com/b/mgpfLf3b/t2a2-marketplace-app)
+
+![Day 1](./docs/Project_Tracker/Day1.png)
+![Day 4](./docs/Project_Tracker/Day4.png)
+![Day 13](./docs/Project_Tracker/Day13.png)
+![Day 18](./docs/Project_Tracker/Day18.png)
 
 
