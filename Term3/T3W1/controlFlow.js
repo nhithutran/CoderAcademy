@@ -35,14 +35,14 @@ i++ is executed on ech iteration, updates interator ech time loop is done */
 //     console.log(arr[left], arr[right]);
 // }
 
-// for in use for objects
-// const pet = {nickName: 'peanut', animal: 'dog', age:1.5}
-//     for (const property in pet) {
-//         console.log(`${k}: ${pet[k]}`)
-// }
+for in use for objects
+const pet = {nickName: 'peanut', animal: 'dog', age:1.5}
+    for (const property in pet) {
+        console.log(`${k}: ${pet[k]}`)
+}
 
 // for of used on Arays
-cosnt array1 = ['a', 'b', 'c'];
-for (const element of array1) {
-    console.log(element);
-}
+// const array1 = ['a', 'b', 'c'];
+// for (const element of array1) {
+//     console.log(element);
+// }
