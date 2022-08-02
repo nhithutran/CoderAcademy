@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   	<head>
+  		<meta charset="utf-8"/>
+   		<title>Book List</title>
+  	</head>
+   	<body>
+		   <h1>My Book List</h1>
+  <script>
+// Add array of books
+	let books = [
+      {
+        title: 'The Design of EveryDay Things',
+        author: 'Don Norman',
+        alreadyRead: false
+      }, {
+        title: 'The Most Human Human',
+        author: 'Brian Christian',
+        alreadyRead: true
+      }, {
+        title: 'Where the Crawdads sing',
+        author: 'Delia Owens',
+        alreadyRead: true
+      }, {
+        title: 'Atomic Habits',
+        author: 'James Clear',
+        alreadyRead: false
+      }
+    ];
+
+//create ul Element
+    let bookList = document.createElement('ul');
+
+// Iterate through array and crate li
+    for (var i = 0; i < books.length; i++) {
+		let bookListItem = document.createElement('li');
+    // Use backtick to add item
+    let bookDescription = document.createTextNode(`${books[i].title} by ${books[i].author}`);
+    // Want to append book description to book list item
+    bookListItem.appendChild(bookDescription);
+		bookList.appendChild(bookListItem);
+}
+
+    document.body.append(bookList);
+  </script>     
+	</body>
+</html>
