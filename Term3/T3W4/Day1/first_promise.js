@@ -1,4 +1,4 @@
-const myDirstPromise = new Promise((resolve, reject) => {
+const myFirstPromise = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve("Success!");
     }, 250); 

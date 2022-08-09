@@ -53,7 +53,7 @@ function getPokemonGreetingWithTimeout(pokemon, sound) {
 let greeting = getPokemonGreetingWithTimeout(5, "grrr");
 
 greeting
-.then(greeting => console.log("Greeting:", greeting))
+.then(greeting => console.log("Greeting:", greeting))// .then(onFulfilled)
 .catch(error => console.log(error.message))
 .finally(() => console.log("Promise finished!"));
 
