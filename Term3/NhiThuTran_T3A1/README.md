@@ -512,34 +512,36 @@ Data from JSON files can also be extracted, filtered or transformed to be more m
 ```
 /* Use class keyword to declare an object from ES6. Initialize the properties of 
 an instance and pass in 'brand' as the parameter */
-**class Car {**
+  class Car {
   constructor(brand) { 
     //Create instance variable and assign value matching the paramater(brand)
     this.carname = brand; 
   }
 
-  //Declaring a method called present
+  //Declaring a method called present. Specify what to print - 'I have a {brand}'
   present() { 
-    //Specify what to print - 'I have a {brand}'
     return 'I have a ' + this.carname; 
   }
 }
 
 /* Declaring a class called 'Model'.
 Using extend keyword to inherit property and methods from the 'Car' class */
-```
 class Model extends Car { 
+
   // initialize the properties of an instance and pass in 'brand' as the parameter  
   constructor(brand, mod) { 
+
     // Give access to parent class 'Car' parameter 'brand'
     super(brand); 
+
     //Create instance variable and assign value matching the paramater(mod)
     this.model = mod; //Create instance variable and assign value matching the paramater(mod)
 }
   }
   show() { // Declaring a method called show
-    // Specify what to print - 'I have a {brand}' inherited from the Car class present() and concatenate ',
-    // it was made in {model}'
+
+    /* Specify what to print - 'I have a {brand}' inherited from the Car class present()
+    and concatenate ', it was made in {model}' */
     return this.present() + ', it was made in ' + this.model; 
   }
 }
@@ -563,11 +565,13 @@ for (model of models) {
   
   // Declare 'make' varable to equal range from randIntFromInteval starting from 0 & end at last iteration
   make = makes[randomIntFromInterval(0,makes.length-1)]
+
   // Declare model varable and pass in same values as the make variable
   model = models[randomIntFromInterval(0,makes.length-1)]
 
   // Create new instance of Model using it's property and methods and pass in make and model parameters
   mycar = new Model(make, model); 
+
   // Printing sentence from 'show' method inserting make and model value derived from randomIntFromInterval 
   console.log(mycar.show()) 
 }
