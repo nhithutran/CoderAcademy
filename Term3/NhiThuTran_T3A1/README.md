@@ -509,6 +509,7 @@ Data from JSON files can also be extracted, filtered or transformed to be more m
 
 
 ### Q13
+```
 // Use class keyword to declare an object from ES6. Initialize the properties of an instance and pass in 'brand' as the parameter
 class Car { 
   constructor(brand) { 
@@ -531,35 +532,35 @@ class Model extends Car {
   constructor(brand, mod) { 
     // Give access to parent class 'Car' parameter 'brand'
     super(brand); 
-    *//Create instance variable and assign value matching the paramater(mod)*
+    //Create instance variable and assign value matching the paramater(mod)
     this.model = mod; //Create instance variable and assign value matching the paramater(mod)
 }
   }
   show() { // Declaring a method called show
-    *// Specify what to print - 'I have a {brand}' inherited from the Car class present() and concatenate ',*
-    *// it was made in {model}'*
+    // Specify what to print - 'I have a {brand}' inherited from the Car class present() and concatenate ',
+    // it was made in {model}'
     return this.present() + ', it was made in ' + this.model; 
   }
 }
 
 let makes = ["Ford", "Holden", "Toyota"]  // Declare a variable called 'Make' and giving 3 values
 
-*/* Declare a variable called 'model' to generate a sequance of years using the Array.from method which create a new Array* *instance with 3 parameters. 1st creates new array with length of 40 empty slots, 2nd argument calls on each element of array*
-*(x) and it's index(i), 3rd using arrow function to add the range derived from index of each element(x) to 1980 */*
+/* Declare a variable called 'model' to generate a sequance of years using the Array.from method which create a new Array instance with 3 parameters. 1st creates new array with length of 40 empty slots, 2nd argument calls on each element of array
+(x) and it's index(i), 3rd using arrow function to add the range derived from index of each element(x) to 1980 */
 let models = Array.from(new Array(40), (x,i) => i + 1980)
 
-*// Declare function called radomIntFromInverval passing in 2 parameters min and max*
+// Declare function called radomIntFromInverval passing in 2 parameters min and max
 function randomIntFromInterval(min,max) { // Declare function called radomIntFromInverval passing in 2 parameters min and max
 
-    */* Math.radom function returns random integers between max and min value inclusive of minimum value*
-    *Result of Math.random function is passed into Math.floor which then truncates decimal numbers to whole number */*
+    /* Math.radom function returns random integers between max and min value inclusive of minimum value
+    Result of Math.random function is passed into Math.floor which then truncates decimal numbers to whole number */
     return Math.floor(Math.random()*(max-min+1)+min); 
 }
 
-*// Looping through each element of the models object*
+// Looping through each element of the models object
 for (model of models) { 
   
-  *// Declare 'make' varable to equal range from randIntFromInteval starting from 0 & end at last iteration*
+  // Declare 'make' varable to equal range from randIntFromInteval starting from 0 & end at last iteration
   make = makes[randomIntFromInterval(0,makes.length-1)]
   // Declare model varable and pass in same values as the make variable
   model = models[randomIntFromInterval(0,makes.length-1)]
@@ -569,6 +570,7 @@ for (model of models) {
   // Printing sentence from 'show' method inserting make and model value derived from randomIntFromInterval 
   console.log(mycar.show()) 
 }
+```
 
 I believe that the radomIntFromInterval function only require the length of the array to be passed in to the Math.random(). It is currently repeating the same year between 1980 to 1982 multiple times as the randomise number added into 1980 is an integar before being trancated by the Math.floor().  I feel the range is already derived from the 'model' variable above.  This can make the code more dry and efficient.
 
