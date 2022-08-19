@@ -510,16 +510,17 @@ Data from JSON files can also be extracted, filtered or transformed to be more m
 
 ### Q13
 ```
-// Use class keyword to declare an object from ES6. Initialize the properties of an instance and pass in 'brand' as the parameter
-class Car { 
+/* Use class keyword to declare an object from ES6. Initialize the properties of 
+an instance and pass in 'brand' as the parameter */
+**class Car {**
   constructor(brand) { 
-    // Creat instance variable and assign value matching the paramater(brand)
+    //Create instance variable and assign value matching the paramater(brand)
     this.carname = brand; 
   }
 
-  // declaring a method called present
+  //Declaring a method called present
   present() { 
-    // Specify what to print - 'I have a {brand}'
+    //Specify what to print - 'I have a {brand}'
     return 'I have a ' + this.carname; 
   }
 }
